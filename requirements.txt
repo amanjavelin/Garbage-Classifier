@@ -1,5 +1,16 @@
+<<<<<<< HEAD
 tensorflow==2.19.0
 keras==3.10.0
 numpy
 streamlit
 pillow
+=======
+tensorflow==2.10.1
+keras==2.10.0
+numpy<2
+matplotlib
+seaborn
+streamlit
+scikit-learn
+pillow
+>>>>>>> b527653ddf405131511aa763c43c1eeb33eb462d
