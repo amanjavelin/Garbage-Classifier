@@ -45,10 +45,11 @@ elif uploaded_file is not None:
     
 if image:
 
-    # Preprocess the image
-    img = image.resize(image_size)
-    img_array = tf.keras.preprocessing.image.img_to_array(img)
-    img_array = tf.expand_dims(img_array, 0) 
+    # Preprocessing
+    img = ImageOps.exif_transpose(image)  # Fix orientation
+    img = img.resize((224, 224), Image.BILINEAR)  # Fix resize method
+    img_array = np.array(img, dtype=np.float32)  # Fix dtype
+    img_array = np.expand_dims(img_array, axis=0)  # Add batch dim
 
     # Predict with spinner
     with st.spinner("🔍 Analyzing image..."):
