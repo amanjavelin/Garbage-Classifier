@@ -2,9 +2,12 @@ import streamlit as st
 import tensorflow as tf
 from PIL import Image
 import numpy as np
+from keras.layers import TFSMLayer
 
 # Load the trained model
-model = tf.keras.models.load_model('model/MobileNetV3Large.keras')
+model = tf.keras.Sequential([
+    TFSMLayer("MobileNetV3Large", call_endpoint="serve")
+])
 
 # Define image size (same as what your model expects)
 image_size = (224, 224)
