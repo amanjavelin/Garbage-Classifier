@@ -48,8 +48,8 @@ if image:
     # Preprocessing
     img = ImageOps.exif_transpose(image)  # Fix orientation
     img = img.resize((224, 224), Image.BILINEAR)  # Fix resize method
-    img_array = np.array(img, dtype=np.float32)  # Fix dtype
-    img_array = np.expand_dims(img_array, axis=0)  # Add batch dim
+    img_array = tf.convert_to_tensor(img, dtype=tf.float32)
+    img_array = tf.expand_dims(img_array, axis=0)
 
     # Predict with spinner
     with st.spinner("🔍 Analyzing image..."):
