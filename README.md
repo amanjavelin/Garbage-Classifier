@@ -1,19 +1,22 @@
-# Garbage Classifier App ♻️
+#♻️ Garbage Classification System
 
-A deep learning-based web application to classify images of garbage into categories like **Cardboard, Glass, Metal, Paper, Plastic**, and **Trash** using transfer learning with MobileNetV3Large.
+A deep learning–based image classification project that categorizes waste into classes such as Cardboard, Glass, Metal, Paper, Plastic, and Trash using transfer learning with MobileNetV3Large.
 
-##  Demo
-Upload an image of waste and get an instant prediction of its category, along with confidence level.
+The primary focus of this project is building and evaluating an accurate image classification model, along with exploring deployment using Streamlit.
 
-##  Features
-- Built with **TensorFlow** and **Keras**
-- Uses **MobileNetV3Large** for high accuracy with fast inference
-- Clean, responsive **Streamlit** interface
-- Displays prediction and confidence visually
-- Option to upload images and get real-time results
+---
 
-##  Classes
-The model is trained to identify the following classes:
+### Features
+- Built using TensorFlow and Keras
+- Transfer learning with MobileNetV3Large pretrained on ImageNet
+- Image preprocessing and normalization pipeline
+- Multi-class classification of common waste categories
+- Streamlit-based interface for interactive image inference (experimental)
+
+---
+
+### Classes
+The model is trained to identify the following categories:
 - Cardboard
 - Glass
 - Metal
@@ -21,8 +24,17 @@ The model is trained to identify the following classes:
 - Plastic
 - Trash
 
-##  Model Architecture
-- Base model: `MobileNetV3Large` (pretrained on ImageNet)
-- Input size: `224x224x3`
-- Fine-tuned top layers
-- Accuracy achieved: **94.38%**
+---
+
+### Model Architecture
+- Base model: MobileNetV3Large (ImageNet pretrained)
+- Input shape: 224 × 224 × 3
+- Fine-tuned classification head
+- Accuracy achieved during local evaluation: **94.38%**
+
+---
+
+### Tech Stack
+- TensorFlow, Keras
+- NumPy, Pandas
+- Streamlit
