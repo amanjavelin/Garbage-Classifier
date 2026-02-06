@@ -1,4 +1,4 @@
-#♻️ Garbage Classification System
+# ♻️ Garbage Classification System
 
 A deep learning–based image classification project that categorizes waste into classes such as Cardboard, Glass, Metal, Paper, Plastic, and Trash using transfer learning with MobileNetV3Large.
 
